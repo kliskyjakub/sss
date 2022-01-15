@@ -1,46 +1,4 @@
-body{
-  min-height: 0px;
-}
-h1{
-  font-size: 6.5vw;
-}
-button {
-  padding: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: #333333;
-  border: 1px solid #333333;
-  font-size: 1.2vw;
-  border-radius: 50px;
-}
-.container {
-  top: 0;
-  height: 100vh;
-  position: absolute;
-}
-
-.vertical-center {
+body {
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-@media (max-width: 1000px) {
-  h1{
-    font-size: 60px;
-  }
-  button {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 700px) {
-  h1{
-    font-size: 40px;
-  }
-  button {
-    font-size: 10px;
-  }
+  padding: 0;
 }

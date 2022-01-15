@@ -1,0 +1,69 @@
+.navigation_wrapper {
+  display: flex;
+  flex-flow: column;
+  margin-top: 1rem;
+}
+
+.nav_title {
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.nav_wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.nav_list {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  list-style: none;
+  width: 40vw;
+  padding: 0;
+}
+
+.nav_list li {
+  justify-content: center;
+  display: flex;
+  flex-flow: row;
+}
+
+.nav_list li > * {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 1rem;
+}
+
+.nav_selected {
+  border-bottom: 1.5px solid black;
+}
+
+.nav_account_wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+.nav_account_actions {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-right: 1rem;
+  gap: 1rem;
+}
+
+.account_text {
+  font-weight: 600;
+}
+
+.account_button {
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: white;
+  background-color: black;
+  border: none;
+}
