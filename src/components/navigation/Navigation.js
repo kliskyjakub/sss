@@ -42,6 +42,7 @@ const Navigation = () => {
         <Route element={<div>Hi</div>} path="/create" />
         <Route element={<Manage />} path="/manage" />
         <Route element={<div>Hi</div>} path="/buy" />
+        <Route path="*" element={<Manage />} />
       </Routes>
     </div>
   );
