@@ -1,8 +1,10 @@
 import { useContext } from "react";
-import { NavLink, Routes, Route } from "react-router-dom";
+import { NavLink, Routes, Route, Navigate } from "react-router-dom";
 import Manage from "../pages/Manage";
 import styles from "./Navigation.module.css";
 import { WalletContext } from "../../store/WalletContext";
+import SubscriptionDetail from "../subscription/SubscriptionDetail";
+import SubscriptionList from "../subscription/SubscriptionList";
 
 const Navigation = () => {
   const { currentAccount, setCurrentAccount } = useContext(WalletContext);
@@ -26,7 +28,10 @@ const Navigation = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className={({ isActive }) => isActive && styles["nav_selected"]} to="/manage">
+            <NavLink
+              className={({ isActive }) => isActive && styles["nav_selected"]}
+              to="/manage/list"
+            >
               Manage
             </NavLink>
           </li>
@@ -40,9 +45,12 @@ const Navigation = () => {
       <div className={styles["section_seperator"]}></div>
       <Routes>
         <Route element={<div>Hi</div>} path="/create" />
-        <Route element={<Manage />} path="/manage" />
+        <Route element={<Manage />} path="/manage">
+          <Route path="list" element={<SubscriptionList />} />
+          <Route path="detail" element={<SubscriptionDetail />} />
+        </Route>
         <Route element={<div>Hi</div>} path="/buy" />
-        <Route path="*" element={<Manage />} />
+        <Route path="*" element={<Navigate replace to="/manage/list" />}></Route>
       </Routes>
     </div>
   );
