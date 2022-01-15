@@ -5,6 +5,7 @@ import styles from "./Navigation.module.css";
 import { WalletContext } from "../../store/WalletContext";
 import SubscriptionDetail from "../subscription/SubscriptionDetail";
 import SubscriptionList from "../subscription/SubscriptionList";
+import Create from "../pages/Create";
 
 const Navigation = () => {
   const { currentAccount, setCurrentAccount } = useContext(WalletContext);
@@ -44,7 +45,7 @@ const Navigation = () => {
       </nav>
       <div className={styles["section_seperator"]}></div>
       <Routes>
-        <Route element={<div>Hi</div>} path="/create" />
+        <Route element={<Create />} path="/create" />
         <Route element={<Manage />} path="/manage">
           <Route path="list" element={<SubscriptionList />} />
           <Route path="detail" element={<SubscriptionDetail />} />
