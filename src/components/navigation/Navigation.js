@@ -15,7 +15,7 @@ const Navigation = () => {
         <div className={styles["nav_account_actions"]}>
           <div className={styles["account_text"]}>{currentAccount}</div>
           <button className={styles["account_button"]} onClick={() => setCurrentAccount("")}>
-            Log Out
+            Disconnect wallet
           </button>
         </div>
       </div>
