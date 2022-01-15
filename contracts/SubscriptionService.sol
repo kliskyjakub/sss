@@ -18,7 +18,7 @@ uint256 public tokenIdEnum;
 constructor (string memory _name, string memory _symbol) ERC721(_name, _symbol) {}
 
 function buySubscription() external returns (uint256 tokenId) {
-    mint(msg.sender, tokenIdEnum++);
+    _mint(msg.sender, tokenIdEnum++);
     // mint NFT
     // setup superfluid stream
 }
@@ -35,6 +35,4 @@ function updateSubscription(uint256 amount) external {
 function checkPaying(address _check) public view returns (bool paying) {
 
 }
-
-
 }
