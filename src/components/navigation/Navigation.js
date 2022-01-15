@@ -37,6 +37,7 @@ const Navigation = () => {
           </li>
         </ul>
       </nav>
+      <div className={styles["section_seperator"]}></div>
       <Routes>
         <Route element={<div>Hi</div>} path="/create" />
         <Route element={<Manage />} path="/manage" />

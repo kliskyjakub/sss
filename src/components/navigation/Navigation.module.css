@@ -17,9 +17,8 @@
 }
 
 .nav_list {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
   width: 40vw;
   padding: 0;
@@ -38,7 +37,7 @@
 }
 
 .nav_selected {
-  border-bottom: 1.5px solid black;
+  font-weight: 600;
 }
 
 .nav_account_wrapper {
@@ -66,4 +65,10 @@
   color: white;
   background-color: black;
   border: none;
+}
+
+.section_seperator {
+  width: 5rem;
+  border-bottom: 1.5px solid black;
+  margin: 0 auto;
 }
