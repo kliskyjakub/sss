@@ -65,6 +65,7 @@
   color: white;
   background-color: black;
   border: none;
+  cursor: pointer;
 }
 
 .section_seperator {
