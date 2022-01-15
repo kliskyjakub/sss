@@ -27,11 +27,11 @@ const Create = () => {
             />
           </div>
           <p>DAIx/second</p>
-          <p>{parseFloat(flowRate / 60 / 60).toFixed(2)}</p>
+          <p>{parseFloat(flowRate * 60 * 60).toFixed(2)}</p>
           <p>DAIx/hour</p>
-          <p>{parseFloat(flowRate / 60 / 60 / 24).toFixed(2)}</p>
+          <p>{parseFloat(flowRate * 60 * 60 * 24).toFixed(2)}</p>
           <p>DAIx/day</p>
-          <p>{parseFloat(flowRate / 60 / 60 / 24 / 30).toFixed(2)}</p>
+          <p>{parseFloat(flowRate * 60 * 60 * 24 * 30).toFixed(2)}</p>
           <p>DAIx/month</p>
         </div>
         <p>Description:</p>
