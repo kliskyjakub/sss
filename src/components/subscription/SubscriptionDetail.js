@@ -4,6 +4,7 @@ import Button from "../button/Button";
 
 const SubscriptionDetail = () => {
   const random = Boolean(Math.round(Math.random()));
+
   return (
     <div className={styles["detail_wrapper"]}>
       <img src={yume} width={200} height={200} />

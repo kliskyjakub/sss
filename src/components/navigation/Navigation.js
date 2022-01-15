@@ -24,11 +24,11 @@ const Navigation = () => {
       <h1 className={styles["nav_title"]}>SUPERFLUID SUBSCRIPTION SERVICE</h1>
       <nav className={styles["nav_wrapper"]}>
         <ul className={styles["nav_list"]}>
-          <li>
+          {/* <li>
             <NavLink className={({ isActive }) => isActive && styles["nav_selected"]} to="/create">
               Create
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               className={({ isActive }) => isActive && styles["nav_selected"]}
@@ -49,7 +49,7 @@ const Navigation = () => {
       </nav>
       <div className={styles["section_seperator"]}></div>
       <Routes>
-        <Route element={<Create />} path="/create" />
+        {/* <Route element={<Create />} path="/create" /> */}
         <Route element={<Manage />} path="/manage">
           <Route path="list" element={<SubscriptionList title="My Subscriptions" />} />
           <Route path="detail" element={<SubscriptionDetail />} />

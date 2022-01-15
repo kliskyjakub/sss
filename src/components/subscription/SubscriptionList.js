@@ -7,9 +7,6 @@ const SubscriptionList = (props) => {
       <h2 className={styles.title}>{props.title}</h2>
       <div className={styles["list"]}>
         <SubscriptionItem />
-        <SubscriptionItem />
-        <SubscriptionItem />
-        <SubscriptionItem />
       </div>
     </div>
   );
