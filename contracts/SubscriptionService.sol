@@ -13,26 +13,24 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  *         pay the subscription
  */
 contract SubscriptionService is ERC721, Ownable {
+    uint256 public tokenIdEnum;
+    constructor (string memory _name, string memory _symbol) ERC721(_name, _symbol) {}
 
-uint256 public tokenIdEnum;
-constructor (string memory _name, string memory _symbol) ERC721(_name, _symbol) {}
-
-function buySubscription() external returns (uint256 tokenId) {
-    _mint(msg.sender, tokenIdEnum++);
-    // mint NFT
-    // setup superfluid stream
-}
-
-function checkSubscription(address _check) external view returns (bool sub) {
-    if (balanceOf(_check) > 0) {
-        sub = true;
+    function buySubscription() external returns (uint256 tokenId) {
+        _mint(msg.sender, tokenIdEnum++);
+        // mint NFT
+        // setup superfluid stream
     }
-}
 
-function updateSubscription(uint256 amount) external {
+    function checkSubscription(address _check) external view returns (bool sub) {
+        if (balanceOf(_check) > 0) {
+            sub = true;
+        }
+    }
 
-}
-function checkPaying(address _check) public view returns (bool paying) {
+    function updateSubscription(uint256 amount) external {
 
-}
+    }
+    function checkPaying(address _check) public view returns (bool paying) {
+    }
 }

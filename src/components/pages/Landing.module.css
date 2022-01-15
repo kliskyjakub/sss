@@ -4,10 +4,12 @@
 }
 
 .main_left_wrapper {
+  height: 100vh;
   display: flex;
   flex-flow: column;
+  justify-content: center;
   gap: 2rem;
-  margin: 10vw;
+  margin-left: 20%;
 }
 
 .button_wrapper {
