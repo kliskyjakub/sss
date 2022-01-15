@@ -42,7 +42,7 @@ const Create = () => {
         <p>No. of subscriptions:</p>
         <p>42535</p>
       </div>
-      <Button>Buy Subscription</Button>
+      <Button>Create Subscription</Button>
     </div>
   );
 };

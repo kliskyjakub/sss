@@ -1,7 +1,9 @@
 import yume from "./yume.png";
 import styles from "./SubscriptionDetail.module.css";
+import Button from "../button/Button";
 
 const SubscriptionDetail = () => {
+  const random = Boolean(Math.round(Math.random()));
   return (
     <div className={styles["detail_wrapper"]}>
       <img src={yume} width={200} height={200} />
@@ -20,6 +22,11 @@ const SubscriptionDetail = () => {
         </div>
         <p>Minimum Amount: </p>
         <p>TokenID: </p>
+        {random ? (
+          <Button filled={random}>Buy Subscription</Button>
+        ) : (
+          <Button filled={!random}>Bought</Button>
+        )}
       </div>
     </div>
   );

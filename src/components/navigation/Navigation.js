@@ -6,6 +6,7 @@ import { WalletContext } from "../../store/WalletContext";
 import SubscriptionDetail from "../subscription/SubscriptionDetail";
 import SubscriptionList from "../subscription/SubscriptionList";
 import Create from "../pages/Create";
+import Buy from "../pages/Buy";
 
 const Navigation = () => {
   const { currentAccount, setCurrentAccount } = useContext(WalletContext);
@@ -37,7 +38,10 @@ const Navigation = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className={({ isActive }) => isActive && styles["nav_selected"]} to="/buy">
+            <NavLink
+              className={({ isActive }) => isActive && styles["nav_selected"]}
+              to="/buy/list"
+            >
               Buy
             </NavLink>
           </li>
@@ -47,10 +51,13 @@ const Navigation = () => {
       <Routes>
         <Route element={<Create />} path="/create" />
         <Route element={<Manage />} path="/manage">
-          <Route path="list" element={<SubscriptionList />} />
+          <Route path="list" element={<SubscriptionList title="My Subscriptions" />} />
           <Route path="detail" element={<SubscriptionDetail />} />
         </Route>
-        <Route element={<div>Hi</div>} path="/buy" />
+        <Route element={<Buy />} path="/buy">
+          <Route path="list" element={<SubscriptionList title="Browse Subscriptions" />} />
+          <Route path="detail" element={<SubscriptionDetail />} />
+        </Route>
         <Route path="*" element={<Navigate replace to="/manage/list" />}></Route>
       </Routes>
     </div>
