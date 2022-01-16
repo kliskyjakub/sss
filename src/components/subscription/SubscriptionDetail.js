@@ -11,7 +11,7 @@ const createStream = async () => {
   const provider = new ethers.providers.Web3Provider(ethereum);
   const signer = provider.getSigner();
   const connectedContract = new ethers.Contract(
-    "0xC12D8D0324Ec2D72aD4edA864cDe735a5d7D9e30",
+    "0xE3eb94a3604eDDd3FD9b24fF325D091EC3221892",
     SubscriptionService.abi,
     signer
   );
@@ -27,7 +27,7 @@ const createStream = async () => {
   try {
     const createFlowOperation = sf.cfaV1.createFlow({
       sender: signer._address,
-      receiver: "0xC12D8D0324Ec2D72aD4edA864cDe735a5d7D9e30",
+      receiver: "0xE3eb94a3604eDDd3FD9b24fF325D091EC3221892",
       flowRate: 1000000,
       superToken: ETHx,
       // userData?: string
@@ -51,7 +51,7 @@ const buySubscription = async () => {
   const provider = new ethers.providers.Web3Provider(ethereum);
   const signer = provider.getSigner();
   const connectedContract = new ethers.Contract(
-    "0xC12D8D0324Ec2D72aD4edA864cDe735a5d7D9e30",
+    "0xE3eb94a3604eDDd3FD9b24fF325D091EC3221892",
     SubscriptionService.abi,
     signer
   );
@@ -72,7 +72,7 @@ const SubscriptionDetail = () => {
     const provider = new ethers.providers.Web3Provider(ethereum);
     const signer = provider.getSigner();
     const connectedContract = new ethers.Contract(
-      "0xC12D8D0324Ec2D72aD4edA864cDe735a5d7D9e30",
+      "0xE3eb94a3604eDDd3FD9b24fF325D091EC3221892",
       SubscriptionService.abi,
       signer
     );
