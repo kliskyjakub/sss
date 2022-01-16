@@ -157,7 +157,7 @@ const SubscriptionDetail = () => {
         )}
         {!isLoading && (
           <p>
-            Note: You need to have ETH and ETHx to buy a subscription. Get one from the Superfluid
+            Note: You need to have ETH and ETHx to buy a subscription. Get ETHx from the Superfluid
             dashboard
           </p>
         )}
