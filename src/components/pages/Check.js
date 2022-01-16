@@ -13,7 +13,7 @@ const Check = () => {
     const provider = new ethers.providers.Web3Provider(ethereum);
     const signer = provider.getSigner();
     const connectedContract = new ethers.Contract(
-      "0xE3eb94a3604eDDd3FD9b24fF325D091EC3221892",
+      "0x7dE55930e8E0AA2b9f8e56aaBf2c6616866E0008",
       SubscriptionService.abi,
       signer
     );
