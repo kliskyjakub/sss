@@ -2,10 +2,7 @@ import styles from "./Button.module.css";
 
 const Button = (props) => {
   return (
-    <button
-      onClick={props.onClick}
-      className={props.filled ? styles.button : styles["button_outline"]}
-    >
+    <button onClick={props.onClick} className={styles.button}>
       {props.children}
     </button>
   );
