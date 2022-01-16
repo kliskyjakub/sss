@@ -20,6 +20,7 @@ const Navigation = () => {
       </div>
       <h1 className={styles["nav_title"]}>SUPERFLUID SUBSCRIPTION SERVICE</h1>
       <nav className={styles["nav_wrapper"]}>
+          <ul className={styles["nav_list"]}>
           <li>
             <NavLink className={({ isActive }) => isActive && styles["nav_selected"]} to="/check">
               Check
@@ -33,7 +34,6 @@ const Navigation = () => {
                   Buy
               </NavLink>
           </li>
-          <ul className={styles["nav_list"]}>
         </ul>
       </nav>
       <div className={styles["section_seperator"]}></div>
