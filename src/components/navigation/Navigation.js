@@ -1,12 +1,9 @@
 import { useContext } from "react";
 import { NavLink, Routes, Route, Navigate } from "react-router-dom";
-import Manage from "../pages/Manage";
 import styles from "./Navigation.module.css";
 import { WalletContext } from "../../store/WalletContext";
 import SubscriptionDetail from "../subscription/SubscriptionDetail";
-import SubscriptionList from "../subscription/SubscriptionList";
-import Create from "../pages/Create";
-import Buy from "../pages/Buy";
+import Check from "../pages/Check";
 
 const Navigation = () => {
   const { currentAccount, setCurrentAccount } = useContext(WalletContext);
@@ -23,42 +20,27 @@ const Navigation = () => {
       </div>
       <h1 className={styles["nav_title"]}>SUPERFLUID SUBSCRIPTION SERVICE</h1>
       <nav className={styles["nav_wrapper"]}>
-        <ul className={styles["nav_list"]}>
-          {/* <li>
-            <NavLink className={({ isActive }) => isActive && styles["nav_selected"]} to="/create">
-              Create
-            </NavLink>
-          </li> */}
           <li>
-            <NavLink
-              className={({ isActive }) => isActive && styles["nav_selected"]}
-              to="/manage/list"
-            >
-              Manage
+            <NavLink className={({ isActive }) => isActive && styles["nav_selected"]} to="/check">
+              Check
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className={({ isActive }) => isActive && styles["nav_selected"]}
-              to="/buy/list"
-            >
-              Buy
-            </NavLink>
+              <NavLink
+                  className={({ isActive }) => isActive && styles["nav_selected"]}
+                  to="/buy"
+              >
+                  Buy
+              </NavLink>
           </li>
+          <ul className={styles["nav_list"]}>
         </ul>
       </nav>
       <div className={styles["section_seperator"]}></div>
       <Routes>
-        {/* <Route element={<Create />} path="/create" /> */}
-        <Route element={<Manage />} path="/manage">
-          <Route path="list" element={<SubscriptionList title="My Subscriptions" />} />
-          <Route path="detail" element={<SubscriptionDetail />} />
-        </Route>
-        <Route element={<Buy />} path="/buy">
-          <Route path="list" element={<SubscriptionList title="Browse Subscriptions" />} />
-          <Route path="detail" element={<SubscriptionDetail />} />
-        </Route>
-        <Route path="*" element={<Navigate replace to="/manage/list" />}></Route>
+        <Route element={<Check />} path="/check" />
+        <Route element={<SubscriptionDetail />} path="/buy"/>
+        <Route path="*" element={<Navigate replace to="/buy" />}></Route>
       </Routes>
     </div>
   );
